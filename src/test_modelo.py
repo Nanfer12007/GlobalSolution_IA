@@ -6,7 +6,7 @@ with open('models/modelo_alerta_calor.pkl', 'rb') as f:
     modelo = pickle.load(f)
 
 # Entrada: temperatura, umidade, vento
-entrada = np.array([[34.5, 40.0, 2.0]])
+entrada = np.array([[28.0, 60.0, 3.0]])
 
 # Faz a previsão
 predicao = modelo.predict(entrada)

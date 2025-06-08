@@ -5,7 +5,7 @@ from sklearn.metrics import classification_report
 import pickle 
 import os
 
-# Caminho do CSV (já salvo localmente)
+# Caminho do CSV
 caminho_arquivo = 'data/clima_sp.csv'
 
 # Lê o arquivo CSV, separador = ';'
@@ -18,7 +18,6 @@ df = df.rename(columns={
     'VENTO, VELOCIDADE HORARIA(m/s)': 'VENTO'
 })
 
-# Remove linhas com dados ausentes
 df = df.dropna(subset=['TEMPERATURA', 'UMIDADE', 'VENTO'])
 
 # Variáveis independentes (entradas)
@@ -45,4 +44,4 @@ print(classification_report(y_test, y_pred))
 os.makedirs('models', exist_ok=True)
 with open('models/modelo_alerta_calor.pkl', 'wb') as f:
     pickle.dump(modelo, f)
-print("✅ Modelo salvo em: models/modelo_alerta_calor.joblib")
+print("✅ Modelo salvo em: models/modelo_alerta_calor.pkl")

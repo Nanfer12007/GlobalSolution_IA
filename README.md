@@ -10,7 +10,7 @@ Com o avanço das mudanças climáticas, a frequência de ondas de calor aumento
 ## Objetivo da Análise
 O objetivo é criar um Sistema de Alerta de Calor Extremo, que através de machine learning consiga prever dias de risco baseado em dados históricos de temperatura e umidade, enviando alertas preventivos.
 
-## Modelo dscolhido: Random Forest Classifier
+## Modelo escolhido: Random Forest Classifier
 O Random Forest Classifier foi escolhido por oferecer boa performance em problemas de classificação binária com múltiplas variáveis numéricas e categóricas, como é o caso da previsão de alertas de calor extremo.
 
 ## Metodologia Utilizada
@@ -71,6 +71,12 @@ Componente                    Função <br/>
 - scikit-learn
 - matplotlib
 - seaborn
+
+## Como ativar 
+
+- cd GlobalSolution_IA
+- python src/main.py [ativar o modelo de testes]
+- python src/test_modelo.py [ver o modelo em ação]
 
 # Resultados Obtidos
 O modelo foi capaz de identificar condições de calor extremo com precisão, baseado nos dados históricos. As métricas indicaram:
